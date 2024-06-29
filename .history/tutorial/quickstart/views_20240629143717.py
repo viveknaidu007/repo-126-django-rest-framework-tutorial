@@ -7,7 +7,7 @@ from .serializers import *
 # Create your views here.
 @api_view(['GET'])
 def home(request):
-    student_obj = Student.objects.all()
+    student_obj = Student.object.all()
     serializer = StudentSerializer(student_obj,many=True)
 
 
