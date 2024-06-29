@@ -30,3 +30,10 @@ def update_Book(request,id):
     if serializer.is_valid():
         serializer.save()
     return Response(serializer.data)
+
+#delete
+@api_view(['DELETE'])
+def delete_Book(request,id):
+    booksobj=BooksModel.objects.get(id=id) #queryset
+    booksobj.delete()
+    return Response("book is deleted")
