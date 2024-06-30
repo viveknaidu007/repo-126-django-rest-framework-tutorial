@@ -13,7 +13,7 @@ class Studentviewset(viewsets.ViewSet):
         serializer=StudentSerializer(queryset,many=True)
         return Response(serializer.data)
 
-    def retriever(self,request,pk=None):
+    def retrieve(self,request,pk=None):
         id=pk
         if id is not None:
                     queryset=Student.objects.all()
@@ -43,6 +43,3 @@ class Studentviewset(viewsets.ViewSet):
               serializer.save()
               return Response({"msg":"complete data created"})
          return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
-
-
-
