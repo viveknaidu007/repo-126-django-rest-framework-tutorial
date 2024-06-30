@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from .serializers import *
-from rest_framework.generics import ListAPIView,CreateAPIView,RetrieveAPIView,UpdateAPIView,DestroyAPIView,ListCreateAPIView,RetrieveUpdateAPIView,RetrieveDestroyAPIView,RetrieveUpdateDestroyAPIView
+from rest_framework.generics import ListAPIView,CreateAPIView,RetrieveAPIView,UpdateAPIView,DestroyAPIView,ListCreateAPIView,RetrieveUpdateAPIView,RetrieveDestroyAPIView
 
 # Create your views here.
 class StudentList(ListAPIView):
@@ -50,7 +50,7 @@ class Studentrd(RetrieveDestroyAPIView):
     serializer_class=StudentSerializers
 
 
-class Studentrud(RetrieveUpdateDestroyAPIView):
+class Studentrud(RetrieveDestroyAPIView):
     queryset=Student.objects.all()
     serializer_class=StudentSerializers
 

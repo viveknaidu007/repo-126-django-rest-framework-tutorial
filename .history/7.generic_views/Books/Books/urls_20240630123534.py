@@ -25,9 +25,6 @@ urlpatterns = [
     path("display/<int:pk>/", views.Studentrev.as_view()),
     path("update/<int:pk>/", views.StudentUp.as_view()),
     path("delete/<int:pk>/", views.Studentdel.as_view()),
-    path("lc/", views.Studentlc.as_view()),
-    path("ru/<int:pk>", views.Studentru.as_view()),
-    path("rd/<int:pk>", views.Studentrd.as_view()),
-    path("rud/<int:pk>", views.Studentrud.as_view()),
+   path("lc/", views.Studentlc.as_view()),
     ]
 
