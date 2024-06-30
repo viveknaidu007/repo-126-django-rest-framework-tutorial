@@ -46,3 +46,49 @@ class Studentviewset(viewsets.ViewSet):
 
 
 
+
+# Create your views here.
+class StudentCreate(CreateAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializers
+
+# Create your views here.
+class Studentrev(RetrieveAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializers
+
+
+class StudentUp(UpdateAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializers
+
+
+class StudentUp(UpdateAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializers
+
+
+class Studentdel(DestroyAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializers
+
+
+class Studentlc(ListCreateAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializers
+
+
+class Studentru(RetrieveUpdateAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializers
+
+
+class Studentrd(RetrieveDestroyAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializers
+
+
+class Studentrud(RetrieveUpdateDestroyAPIView):
+    queryset=Student.objects.all()
+    serializer_class=StudentSerializers
+
