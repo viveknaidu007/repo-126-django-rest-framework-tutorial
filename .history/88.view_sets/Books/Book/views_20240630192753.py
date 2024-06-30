@@ -30,7 +30,7 @@ class Studentviewset(viewsets.ViewSet):
               return Response({"msg":"complete data updated"})
          return Response(serializer.errors,status=status.HTTP_400_BAD_REQUEST)
     
-    def destroy(self,request,pk):
+    def destroy(self,request):
          id=pk
          queryset=Student.objects.get(pk=id)
          queryset.delete()
